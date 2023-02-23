@@ -4,6 +4,12 @@ export default class CicloVidaClase extends Component<{}, { status: boolean }> {
     state = {
         status: true
     }
+
+    // constructor(props: any) {
+    //     super(props)
+    //     this.cambiaEstado = this.cambiaEstado.bind(this)
+    // }
+
     componentDidMount(): void {
         console.log("El componente se acaba de montar")
         // Lanzar diferentes llamadas a apis

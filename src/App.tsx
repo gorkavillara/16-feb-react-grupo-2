@@ -6,6 +6,9 @@ import CicloVidaFuncional from './components/ciclodevida/CicloVidaFuncional';
 import Contador from './components/contador/Contador';
 import ContadorClase from './components/contador/ContadorClase';
 import DebugComponent from './components/debug/DebugComponent';
+import Eventos from './components/eventos/Eventos';
+import EventosKeyboard from './components/eventos/EventosKeyboard';
+import EventosListeners from './components/eventos/EventosListeners';
 import CompPadre from './components/jerarquia/CompPadre';
 import ComponenteClase from "./components/tipos/ComponenteClase"
 import ComponenteFuncional from "./components/tipos/ComponenteFuncional"
@@ -27,7 +30,10 @@ function App() {
       {/* <ContadorClase /> */}
       {/* {mostrar && <CicloVidaClase />} */}
       {/* {mostrar && <CicloVidaFuncional />} */}
-      <DebugComponent />
+      {/* <DebugComponent /> */}
+      {/* <Eventos /> */}
+      {/* <EventosKeyboard /> */}
+      <EventosListeners />
     </div>
   );
 }
