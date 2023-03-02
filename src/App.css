@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.formik {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+label span.error {
+  color: red;
+  font-size: 0.75rem;
+}
