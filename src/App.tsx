@@ -16,7 +16,7 @@ import { Home, Contact, Users } from "views"
 // }
 
 function App() {
-    const [route, setRoute] = useState("home")
+    const [route, setRoute] = useState("users")
     // const [route, setRoute] = useState({ route: "contact", component: Contact })
 
     // if (route === "contact") return <h2>Contact</h2>
