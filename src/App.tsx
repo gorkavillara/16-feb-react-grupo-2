@@ -1,41 +1,42 @@
 /* eslint-disable */
-import React from 'react';
-import './App.css';
-import CicloVidaClase from './components/ciclodevida/CicloVidaClase';
-import CicloVidaFuncional from './components/ciclodevida/CicloVidaFuncional';
-import Contador from './components/contador/Contador';
-import ContadorClase from './components/contador/ContadorClase';
-import DebugComponent from './components/debug/DebugComponent';
-import Eventos from './components/eventos/Eventos';
-import EventosKeyboard from './components/eventos/EventosKeyboard';
-import EventosListeners from './components/eventos/EventosListeners';
-import CompPadre from './components/jerarquia/CompPadre';
-import ComponenteClase from "./components/tipos/ComponenteClase"
-import ComponenteFuncional from "./components/tipos/ComponenteFuncional"
+import React, { useState } from "react"
+import "./App.css"
+import { Home, Contact, Users } from "views"
 
-const miElemento = <h1>Este es mi elemento</h1>
-const miBoton = <button>Botón</button>
+// const routes = [
+//     { route: "home", component: Home },
+//     { route: "users", component: Users },
+//     { route: "contact", component: Contact },
+// ]
 
+// const routes = {
+//     home: <Home />,
+//     users: <Users />,
+//     contact: <Contact />
+// }
 
 function App() {
-  const mostrar = true
-  return (
-    <div className="App">
-      {/* { miElemento } */}
-      {/* { miBoton } */}
-      {/* <ComponenteClase /> */}
-      {/* <ComponenteFuncional /> */}
-      {/* <CompPadre /> */}
-      {/* <Contador valorInicial={5} /> */}
-      {/* <ContadorClase /> */}
-      {/* {mostrar && <CicloVidaClase />} */}
-      {/* {mostrar && <CicloVidaFuncional />} */}
-      {/* <DebugComponent /> */}
-      {/* <Eventos /> */}
-      {/* <EventosKeyboard /> */}
-      <EventosListeners />
-    </div>
-  );
+    const [route, setRoute] = useState("home")
+    // const [route, setRoute] = useState({ route: "contact", component: Contact })
+
+    // if (route === "contact") return <h2>Contact</h2>
+    // if (route === "home") return <h1>Home</h1>
+
+    return (
+        <div className="App">
+            <div>
+                {/* <button onClick={() => setRoute("home")}>Home</button>
+                <button onClick={() => setRoute("contact")}>Contact</button>
+                <button onClick={() => setRoute("users")}>Users</button> */}
+            </div>
+
+            {route === "home" && <Home />}
+            {route === "contact" && <Contact />}
+            {route === "users" && <Users />}
+            
+            {/* <route.component /> */}
+        </div>
+    )
 }
 
-export default App;
+export default App
