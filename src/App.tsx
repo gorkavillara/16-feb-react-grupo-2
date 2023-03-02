@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React, { useState } from "react"
 import "./App.css"
-import { Home, Contact, Users } from "views"
+import { Home, Contact, Users, TodoList } from "views"
 
 // const routes = [
 //     { route: "home", component: Home },
@@ -16,7 +16,7 @@ import { Home, Contact, Users } from "views"
 // }
 
 function App() {
-    const [route, setRoute] = useState("users")
+    const [route, setRoute] = useState("todos")
     // const [route, setRoute] = useState({ route: "contact", component: Contact })
 
     // if (route === "contact") return <h2>Contact</h2>
@@ -33,6 +33,7 @@ function App() {
             {route === "home" && <Home />}
             {route === "contact" && <Contact />}
             {route === "users" && <Users />}
+            {route === "todos" && <TodoList />}
             
             {/* <route.component /> */}
         </div>

@@ -1,10 +1,21 @@
-import React from "react"
-import "./Home.css"
+import React, { useState } from "react"
+import "./Home.scss"
 
 const Home = () => {
+    const [doble, setDoble] = useState(true)
+
+    const getH1Style = () => {
+        // return `titulo-home${doble && " doble"}`
+        return `titulo-home${doble ? " doble" : ""}`
+    }
+
     return (
-        <div>
-            <h1 className="titulo-home">Estilos home</h1>
+        <div className="home-view">
+            <nav className="navbar"></nav>
+            <h1 className={getH1Style()}>Estilos home</h1>
+            <button onClick={() => setDoble((prev) => !prev)}>
+                Toggle tamaño
+            </button>
         </div>
     )
 }
