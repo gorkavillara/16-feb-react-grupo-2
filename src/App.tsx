@@ -1,9 +1,6 @@
 /* eslint-disable */
 import { useState } from "react"
 import Contador from "views/Contador"
-import Dashboard from "views/Dashboard"
-import Settings from "views/Settings"
-import Sidebar from "views/Sidebar"
 import "./App.css"
 
 function App() {
