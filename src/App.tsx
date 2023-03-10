@@ -1,11 +1,11 @@
 /* eslint-disable */
-import Bootstrap from "views/Bootstrap"
-import "bootstrap/dist/css/bootstrap.min.css"
+
+import Material from "views/Material"
 
 function App() {
     return (
         <>
-            <Bootstrap />
+            <Material />
         </>
     )
 }
