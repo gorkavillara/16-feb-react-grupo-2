@@ -1,14 +1,28 @@
+import { ContadorContextInterface, ContextType } from "models"
 import React, { createContext, useReducer } from "react"
+import contadorReducer from "reducers/contadorReducer"
 
-const ContadorContext = createContext(null)
-
-const contadorReducer = () => {
-}
+export const ContadorContext = createContext<ContextType<ContadorContextInterface>>({})
 
 const ContadorContextProvider = ({ children }: React.PropsWithChildren) => {
-    const reductor = useReducer(contadorReducer, { valor: 0 })
+    //@ts-ignore
+    const [contador, dispatchContador] = useReducer(contadorReducer, {
+        valor: 21
+    })
+    // console.log(reductor)
 
-    return <ContadorContext.Provider value={null} children={children} />
+    const restaContador = () => {
+        if (!dispatchContador) return
+        dispatchContador({ type: "DECREMENTA" })
+    }
+
+    const sumaContador = () => {
+        if (!dispatchContador) return
+        dispatchContador({ type: "INCREMENTA" })
+    }
+
+
+    return <ContadorContext.Provider value={{ contador, dispatchContador, restaContador, sumaContador }} children={children} />
 }
 
 export default ContadorContextProvider

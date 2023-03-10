@@ -3,7 +3,7 @@ import { TareasContext } from "contexts/TareasContextProvider"
 
 const ListaTareas = () => {
     const { tareas, nuevaTarea } = useContext(TareasContext)
-    console.log(tareas)
+    // console.log(tareas)
 
     const addReact = () => {
         if (!nuevaTarea) return
