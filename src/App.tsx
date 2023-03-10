@@ -1,11 +1,12 @@
 /* eslint-disable */
+import Bootstrap from "views/Bootstrap"
 import "./App.css"
 
 function App() {
     return (
-        <div className="App">
-            App
-        </div>
+        <>
+            <Bootstrap />
+        </>
     )
 }
 
