@@ -11,7 +11,7 @@ const Concurso = () => {
     if (fraseRestante === "" && inicio) {
       const ahora = new Date()
       alert(
-        `Has tardado: ${(ahora.getTime() - inicio.getTime()) / 1000} s`
+        `Has tardado: ${(ahora.getTime() - inicio.getTime()) / 1000} s!`
       )
     }
   }, [fraseRestante, inicio])
