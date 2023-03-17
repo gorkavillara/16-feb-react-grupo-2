@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+nav.navbar {
+  width: 100%;
+  background: linear-gradient(90deg, rgb(71, 137, 185), rgb(67, 67, 188));
+  padding: 0.7rem 0;
+  color: white;
+}
