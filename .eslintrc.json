@@ -18,6 +18,7 @@
         "react"
     ],
     "rules": {
+        "quotes": ["warn", "double"]
     },
     "ignorePatterns": ["bundle.js"]
 }
